@@ -9,9 +9,9 @@ jobs:
     file_check:
         runs-on: ubuntu-latest
         steps:
-        - uses: actions/checkout@v2
-        - name: File Checker
-            run: |
+            - uses: actions/checkout@v2
+            - name: File_Checker
+              run: |
                 ls -ali
                 if [ ! -f README.md ] ; then
                     exit 1
