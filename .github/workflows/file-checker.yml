@@ -12,7 +12,7 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - name: Linter Python Checker
-              uses: super-linter/super-linter
+              uses: github/super-linter@v4
               env:
                 VALIDATE_ALL_CODEBASE: true
                 DEFAULT_BRANCH: main
