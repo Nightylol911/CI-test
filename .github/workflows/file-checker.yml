@@ -1,19 +1,20 @@
-name: File Checker
+name: Convention Checker
 
 on:
-    push:
+    pull_request:
         branches:
             - main
 
 jobs:
-    file_check:
+    Linter:
         runs-on: ubuntu-latest
         
         steps:
             - uses: actions/checkout@v2
-            - name: File_Checker
-              run: |
-                ls -ali
-                if [ ! -f README.md ] ; then
-                    exit 1
-                fi
+            - name: Linter Python Checker
+              uses: super-linter/super-linter
+              env:
+                VALIDATE_ALL_CODEBASE: true
+                DEFAULT_BRANCH: main
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                VALIDATE_PYTHON: true
