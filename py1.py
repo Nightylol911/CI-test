@@ -1,4 +1,4 @@
-name = "Yazeed"
+user_name = "Yazeed"
 
-print(f"Hello, {name}! Welcome to Python programming.")
+print(f"Hello, {user_name}! Welcome to Python programming.")
 print("Welcome to Twaiq!")
